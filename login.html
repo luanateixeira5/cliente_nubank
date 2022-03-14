@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login - NuBank - Por Luana Teixeira</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <a href="https://br.freepik.com/fotos-vetores-gratis/fundo"></a>
+    <!-- <link href="cliente_nu.html"> -->
+</head>
+
+<body>
+    
+                <div class="background">
+                    <img src="img/fundo.jpg" style="position: inherit; padding: 0px;" type="Fundo vetor criado por Harryarts - br.freepik.com">
+                </div>  
+                        
+                <div class="caixa">                   
+                </div>
+                    <main class="container"> 
+                    
+                    </main>
+
+<!--NOVO FORME-->
+<form action="cliente_nu.html" method="POST">
+    <div>
+        <h2>Login</h2>
+        <input type="email" class="formulario" placeholder="insira seu e-mail" name="email"
+       id="email" aria-describedby="emailHelp" style="position: absolute; top:10px; cursor: pointer;">      
+    </div>
+    <div>
+        <h2 style="position:absolute; top:296px; left:16px; box-sizing: border-box;">Senha</h2>       
+        <input type="password" class="formulario2" placeholder="insira sua senha" name="password"
+             id="password" aria-describedby="emailHelp" style="position: absolute; top:30px; cursor: pointer;">
+    </div>
+    <button id="log-in"
+                style="cursor:pointer; border-radius: 10px; position: relative; width:168px; right:10px;top:-920px; left:566px; background-color: rebeccapurple;border: 1px solid rgb(0 0 0); 
+                border-bottom: solid; font-size: larger; font-weight: bold; color: rgb(0, 0, 0);
+                border-collapse:calc(0, 0 ,0 ,0.5); ">ENTRAR</button>
+
+<div> 
+    <b style="font-size:49px; color: white; margin:549px; font-family: unset; 
+    position: relative; top: -1362px;">Nubank</b>
+</div>
+     
+  <a href="http://psicomost.com.br/" style="position:relative; top: -977px; color: gray; left: 600px;
+   cursor: pointer;">Lembrar senha</a>
+
+</form>
+  
+<!---FORM ANTIGO
+ <form class="form-cta" name="formuser.email">
+    <div>
+       <h2>Login</h2>
+       <input type="email" class="formulario" placeholder="insira seu e-mail" name="Login_id"
+       id="Login_id" aria-describedby="emailHelp" style="position: absolute; top:10px; cursor: pointer;">
+    </div>
+</form>
+
+<form class="form-cta" name="formuser">
+        <div>
+            <h2 style="position:absolute; top:296px; left:16px; box-sizing: border-box;">Senha</h2>
+             <input type="senha" class="formulario2" placeholder="insira sua senha" name="Senha_id"
+             id="Senha_id" aria-describedby="emailHelp" style="position: absolute; top:30px; cursor: pointer;">
+        </div>
+        
+            <div>
+                
+                <button onclick="window.location='cliente_nu.html';" name="email"  id="btnEntrar"
+                style="cursor:pointer; border-radius: 10px; position: relative; width:168px; right:10px;top:-920px; left:566px; background-color: rebeccapurple;border: 1px solid rgb(0 0 0); 
+                border-bottom: solid; font-size: larger; font-weight: bold; color: rgb(0, 0, 0);
+                border-collapse:calc(0, 0 ,0 ,0.5); ">ENTRAR</button>
+            </div>
+ 
+             <div> 
+                 <b style="font-size:49px; color: white; margin:549px; font-family: unset; 
+                 position: relative; top: -1362px;">Nubank</b>
+            </div>
+                  
+               <a src="http://psicomost.com.br" style="position:relative; top: -977px; color: gray; left: 600px;
+                cursor: pointer;">Lembrar senha</a>
+</form>  -->         
+            <!--Créditos ao  GITHUB raphamatsu na validação LOGIN E SENHA, fiz apenas algumas alterações-->        
+</body>
+
+<script>
+    //JS DO NOVO FORME
+    window.onload = ()=>{
+		this.sessionStorage.setItem('email', 'luana@gmail.com');
+		this.sessionStorage.setItem('password', '123');
+	}
+	
+	var input = document.getElementsByTagName('input');
+	var login = document.getElementById('log-in');
+	var form = document.querySelector('form');
+	form.onsubmit = ()=>{return false;}
+
+	login.onclick = ()=>{
+
+		if ((input[0].value != "") && (input[1].value != ""))
+		 {
+		 	if ((input[0].value == sessionStorage.getItem('email')) 
+             && (input[1].value == sessionStorage.getItem('password')))
+		 	 {
+		 	 	form.onsubmit = ()=>{return 1;}
+				  document.cookie = "email="+input[0].value;
+				  document.cookie = "password="+input[1].value;
+		 	 }
+		 	 else
+		 	 {
+                  //retorna mensagem de email ou senha digitado errado!
+		 	 	if ((input[0].value != sessionStorage.getItem('email')) 
+                  || (input[1].value != sessionStorage.getItem('password')))
+			 	 {
+                    window.alert("Email ou Senha informados estão incorretos!");
+			 	 }			 	 
+		 	 }
+		 }
+		else
+		 {
+             //retorna mensagem de email ou senha nao preenchida
+			if (input[0].value == "" || input[1].value == "")
+			{
+                window.alert("Email ou Senha não foram preenchidos!");				
+			}
+		 }
+	}
+
+
+    //JS DO ANTIGO FORME
+    
+     //const user1 = ["luana@gmail.com", "123"]
+    //const user2 = ["", ""]
+   // const users = [user1, user2]
+    /*
+    function entrar() {
+
+        const user = document.getElementById('Login_id').value
+        const senha = document.getElementById('Senha_id').value
+        //const login = [user, senha]
+               
+               if(user === 'luana@gmail.com' && senha === '123' || user == 'luana@gmail.com' && senha == '123'){
+                window.location.href='cliente_nu.html';
+               }else{
+                window.alert("Usuário e senha incorretos ou não preenchidos.")
+                    //break;
+               }
+               window.location.href='cliente_nu.html';
+        /*for (i=0; i<users.length; i++) {
+            const usuario = users[i]
+            if (usuario[1, 2]!=login[1, 2]) {
+            
+                                
+            } else {
+                if (usuario[1]!=login[1]) {
+                    window.alert("Usuário e senha incorretos ou não preenchidos.")
+                    break;
+                } else {
+                     window.location.href="cliente_nu.html";
+                      //break;
+                }
+            }  
+        }   
+    }*/
+</script>

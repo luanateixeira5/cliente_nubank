@@ -1,0 +1,60 @@
+
+h2{
+    color: rgb(255, 255, 255);
+    font-size: 28px !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    position:absolute;
+    padding-left: 466px;
+     box-sizing: border-box;
+    top:170px;
+    justify-content:baseline;
+    left:18px;
+   
+    
+   }
+   img{
+   position:absolute;
+   width: 1334px;
+   min-height: 100vh;
+   min-width: 100vw;
+   }
+   .formulario{
+       position: absolute;
+       top: 230px !important;
+       left:476px;
+       width: 315px;
+       height: 53px;
+   }
+   .formulario2{
+       position: absolute;
+       top: 346px !important;
+       left:476px;
+       width: 315px;
+       height: 53px;
+   }
+   main.container{
+       position: absolute;
+       background:radial-gradient(mediumvioletred, #00000085);
+       height: 394px;
+       width: 389px;
+       left: 455px;
+       top:146px;
+       box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+       border-radius: 8px;
+       display: inline;
+   
+       animation-name: fade;
+       animation-duration: 500ms;  
+   }
+   @keyframes fade {
+        from {
+           opacity: 0;
+           transform: scale(0.9);
+       }
+        to {
+           opacity:1;
+           transform: scale(1);
+       }
+   }
+   
